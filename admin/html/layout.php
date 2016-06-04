@@ -14,7 +14,7 @@
 			<ul class="menu lista">
 				<li><a href="http://localhost/12hd/admin/index.php?page=menu">cadastrar menu</a></li>
 				<li><a href="http://localhost/12hd/admin/index.php?page=lista">lista de responsaveis</a></li>
-				<li><a href="http://localhost/12hd/admin/index.php?page=relatorio">elatorio</a></li>
+				<li><a href="http://localhost/12hd/admin/index.php?page=relatorio">Relatorio</a></li>
 			</ul>
 		</div>
 		<content>

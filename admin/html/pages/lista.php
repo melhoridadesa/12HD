@@ -1,5 +1,3 @@
-<?php //require_once "";?>
-
 <?php ?>
 
 <div class="content">
