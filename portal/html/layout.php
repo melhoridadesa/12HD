@@ -24,9 +24,10 @@
 			</tbody>
 			<tfoot>
 				<tr >
-					<td colspan= "3" ><?php require_once "html/rodape.php"; ?></td>
+					<td colspan= "3" ><article><?php require_once "html/rodape.php"; ?></article></td>
 				</tr>
 			</tfoot>
 		</table>
 	</body>
+
 </html>
