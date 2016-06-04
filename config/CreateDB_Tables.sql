@@ -10,14 +10,16 @@ CREATE TABLE `Contato` (
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
 CREATE TABLE `Pagina` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Link` varchar(30) NOT NULL,
   `Titulo` varchar(50) NOT NULL,
   `Corpo` varchar(500) NOT NULL,
-  `Ativo` bit(1) DEFAULT NULL,
-  PRIMARY KEY (`Id`)
+  `Ativo` bit(1) NOT NULL DEFAULT b'1',
+  `DataHoraUpdate` datetime NOT NULL,
+  `Posicao` int(11) NOT NULL,
+  PRIMARY KEY (`Id`),
+  UNIQUE KEY `Link_UNIQUE` (`Link`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `ResponsavelIdoso` (
@@ -40,9 +42,7 @@ CREATE TABLE `Usuarios` (
   `Senha` varchar(150) NOT NULL,
   `Usuario` varchar(50) NOT NULL,
   `Perfil` varchar(10) NOT NULL DEFAULT 'Admin',
-  PRIMARY KEY (`Id`)
+  PRIMARY KEY (`Id`),
+  UNIQUE KEY `Usuario_UNIQUE` (`Usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
-alter table Usuarios add constraint Usuario_UNIQUE unique (Usuario);
-alter table Pagina add constraint Link_UNIQUE unique (Link);
