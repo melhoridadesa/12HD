@@ -20,7 +20,9 @@ function ConexaoBD($host, $user, $pass, $banco, $sql)
 	}
 	else{
 		$conexao = mysqli_connect($host, $user, $pass, $banco) or die(mysqli_error());
-		$resultado = mysqli_query($conexao, $sql);
+		if (!$resultado = mysqli_query($conexao, $sql)) {
+			printf("<br>MYSQL Errormessage: %s\n", mysqli_error($conexao));
+		}
 		return $resultado;
 	}
 }
