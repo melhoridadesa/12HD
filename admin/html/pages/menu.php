@@ -20,6 +20,14 @@
 
 			<span>Titulo</span><br>
 			<input type="text" name="titulo" placeholder="insira o titulo"><br>
+			
+			<span>posicao</span><br>
+			<input type="number" name="posicao" value="1"><br>
+			
+
+			<span>texto</span><br>
+			<textarea rows="4" cols="50">
+			</textarea>
 
 			<input type="submit" name="salvar" value="Salvar"><br>
 

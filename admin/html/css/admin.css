@@ -45,7 +45,19 @@ li a{
   margin-left: 200px;
 }
 
+a#btn-pdf {
+  border: 1px solid;
+  text-decoration: none;
+  padding: 5px 10px 5px 10px;
+}
 
+input[type="submit"] {
+  margin-top: 10px;
+}
+
+textarea {
+  width: 200px;
+}
 /*			footer
 ---------------------------*/
 div#footer {

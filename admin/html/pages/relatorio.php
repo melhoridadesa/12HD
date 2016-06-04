@@ -1,4 +1,4 @@
 
 <div class="content">
-	relatorio
+	<a href="#" id="btn-pdf">pdf</a>
 </div>
