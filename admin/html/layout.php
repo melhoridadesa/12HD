@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>admin</title>
 
-		<link rel="stylesheet" type="text/css" href="html/css/admin.css">
+		<link rel="stylesheet" type="text/css" href="/12HD/admin/html/css/admin.css">
 	</head>
 	<body>
 		<header>
