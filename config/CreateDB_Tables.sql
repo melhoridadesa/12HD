@@ -42,3 +42,7 @@ CREATE TABLE `Usuarios` (
   `Perfil` varchar(10) NOT NULL DEFAULT 'Admin',
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+alter table Usuarios add constraint Usuario_UNIQUE unique (Usuario);
+alter table Pagina add constraint Link_UNIQUE unique (Link);
