@@ -29,10 +29,35 @@ li a{
   left: 202px;
   position: relative;
   margin-top: 16px;
-  height: 50%;
+  height:  55%;
+  padding: 30px;
 }
 
+.new {
+  width: 208px;
+  position: absolute;
+  padding: 10px;
+  border: 1px solid;
+}
 
+.list-menu {
+  width: 200px;
+  margin-left: 200px;
+}
+
+a#btn-pdf {
+  border: 1px solid;
+  text-decoration: none;
+  padding: 5px 10px 5px 10px;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+}
+
+textarea {
+  width: 200px;
+}
 /*			footer
 ---------------------------*/
 div#footer {
