@@ -1,4 +1,5 @@
-<?php $array = [
+<?php 
+		$array = [
 			'lista' => [
 				'titulo' => 'teste1',
 				'id'	=> 1
@@ -14,7 +15,7 @@
 <div class="content">
 	<div class="new">
 		<h3>Novo campo</h3>
-		<form id="form-menu" action="#" method="post">
+		<form id="form-menu" action="../../libs/validacao/cadMenu.php" method="post">
 			<span>link</span><br>
 			<input type="text" name="link" placeholder="insira o link"><br>
 
@@ -26,7 +27,7 @@
 			
 
 			<span>texto</span><br>
-			<textarea rows="4" cols="50">
+			<textarea rows="4" cols="50" name="corpo">
 			</textarea>
 
 			<input type="submit" name="salvar" value="Salvar"><br>
