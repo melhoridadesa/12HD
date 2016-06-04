@@ -41,7 +41,7 @@
 				
 				<li>
 					<span><?php echo $val['titulo'];?>
-					<a href="<?php echo 'http://localhost/12hd/admin/index.php?page=edit_menu&id='.$val['id']?>">editar</a>
+					<a href="<?php echo 'http://localhost/12HD/admin/html/layout.php?page=edit_menu&id='.$val['id']?>">editar</a>
 					<a href="<?php echo 'link?id='.$val['id']?>">deletar</a>
 				</li>
 			<?php endforeach;?>
