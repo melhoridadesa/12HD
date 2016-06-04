@@ -8,7 +8,7 @@ function CadastraMenu($link, $titulo, $corpo, $ativo, $data, $posicao)
 	$funcao = ConexaoBD("localhost", "root", "123456", "MelhorIdadeSA", $sql);
 
 	if ($funcao) {
-		header("Location:http://localhost/12HD/admin/");
+		header("Location:http://localhost/12HD/admin/html/layout.php?page=lista");
 	} else {
     	echo "Erro ao inserir o cadastro";
 	}

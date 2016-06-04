@@ -15,7 +15,7 @@
 <div class="content">
 	<div class="new">
 		<h3>Novo campo</h3>
-		<form id="form-menu" action="../../libs/validacao/cadMenu.php" method="post">
+		<form id="form-menu" action="../libs/validacao/cadMenu.php" method="post">
 			<span>link</span><br>
 			<input type="text" name="link" placeholder="insira o link"><br>
 
