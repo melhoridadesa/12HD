@@ -16,7 +16,7 @@
                     die();
             }else{
                     	setcookie("login",$login);
-                    	header("Location:/12hd/admin/html/layout.php?page=lista");
+                    	header("Location:/12HD/admin/html/layout.php?page=lista");
                     }
         }
 ?>
