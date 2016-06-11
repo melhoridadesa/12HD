@@ -21,7 +21,7 @@ CREATE TABLE `Pagina` (
   `Posicao` int(11) NOT NULL,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `Link_UNIQUE` (`Link`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `ResponsavelIdoso` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -46,7 +46,7 @@ CREATE TABLE `Usuarios` (
   PRIMARY KEY (`Id`),
   UNIQUE KEY `Usuario_UNIQUE` (`Usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
+ALTER TABLE Pagina AUTO_INCREMENT = 1;
 INSERT INTO Pagina (Link, Titulo, Corpo, Ativo, DataHoraUpdate, Posicao) VALUES ('Home','Bem-Vindo!!!','Inicial Teste',1, NOW(), 1);
 INSERT INTO Pagina (Link, Titulo, Corpo, Ativo, DataHoraUpdate, Posicao) VALUES ('Sobre','12HD Sobre','12 Homens e um Destino',2, NOW(), 1);
 INSERT INTO Pagina (Link, Titulo, Corpo, Ativo, DataHoraUpdate, Posicao) VALUES ('Cadastro','Cadastro','Cadastro Idoso e Responsavel, apenas controle, chama arquivo com form',3, NOW(), 1);
