@@ -1,6 +1,6 @@
 <?php
 
-require $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/conexao/db.php";
+require_once $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/conexao/db.php";
 //echo($_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/conexao/db.php");
 
 $nome = NULL;

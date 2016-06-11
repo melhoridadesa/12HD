@@ -1,5 +1,5 @@
 <?php
-require('/var/www/12HD/admin/libs/conexao/db.php');
+require_once('/var/www/12HD/admin/libs/conexao/db.php');
 
 function CadastraMenu($link, $titulo, $corpo, $ativo, $data, $posicao)
 {
