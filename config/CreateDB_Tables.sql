@@ -1,4 +1,5 @@
 CREATE DATABASE `MelhorIdadeSA` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `MelhorIdadeSA`;
 
 CREATE TABLE `Contato` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -45,4 +46,9 @@ CREATE TABLE `Usuarios` (
   PRIMARY KEY (`Id`),
   UNIQUE KEY `Usuario_UNIQUE` (`Usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO Pagina (Link, Titulo, Corpo, Ativo, DataHoraUpdate, Posicao) VALUES ('Home','Bem-Vindo!!!','Inicial Teste',1, NOW(), 1);
+INSERT INTO Pagina (Link, Titulo, Corpo, Ativo, DataHoraUpdate, Posicao) VALUES ('Sobre','12HD Sobre','12 Homens e um Destino',2, NOW(), 1);
+INSERT INTO Pagina (Link, Titulo, Corpo, Ativo, DataHoraUpdate, Posicao) VALUES ('Cadastro','Cadastro','Cadastro Idoso e Responsavel, apenas controle, chama arquivo com form',3, NOW(), 1);
+INSERT INTO Pagina (Link, Titulo, Corpo, Ativo, DataHoraUpdate, Posicao) VALUES ('Contato','Contato','Contato de usuarios, apenas controle, chama arquivo com form',4, NOW(), 1);
 
