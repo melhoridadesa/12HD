@@ -1,5 +1,5 @@
 <?php 	
-require $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/crud/visMenu.php";
+require_once $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/crud/visMenu.php";
 
 $row = VisualizaMenu();
 
@@ -33,8 +33,8 @@ $row = VisualizaMenu();
 			<?php foreach($row as $valor):?>
 				
 				<li>
-					<span><?php echo $valor['Titulo'];?>
-					<a href="<?php echo 'http://localhost/12HD/admin/html/layout.php?page=edit_menu&id='.$valor['Id']?>">editar</a>
+					<span><?php echo $valor['Link'] . ' - ' . $valor['Titulo'];?>
+					<a href="<?php echo 'layout.php?page=edit_menu&id='.$valor['Id']?>">editar</a>
 					<a href="<?php echo 'link?id='.$valor['Id']?>">deletar</a>
 				</li>
 			<?php endforeach;?>

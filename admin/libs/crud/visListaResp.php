@@ -1,10 +1,10 @@
 <?php
 require_once('/var/www/12HD/admin/libs/conexao/db.php');
 
-function VisualizaMenu()
+function VisualizaResponsaveis($limite="")
 {
-	$sql = "SELECT * FROM Pagina where id not in(3,4)";
-
+	$sql = "SELECT * FROM ResponsavelIdoso ".$limite;
+	
 	$funcao = ConexaoBD("localhost", "root", "123456", "MelhorIdadeSA", $sql);
 
 	if (mysqli_num_rows($funcao) > 0) {

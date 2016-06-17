@@ -28,7 +28,7 @@ if(isset($_POST['BTCadastrarResp'])){
 	?>
 	<h1>Cadastro de Responsavel</h1>
 	<h5>Preencha os dados abaixo para cadastrar um responsavel por idosos</h5>
-	<form action="<? $PHP_SELF; ?>" method="POST"> 
+	<form action="<?php $PHP_SELF; ?>" method="POST"> 
 		<p> 
 			Nome:<br /> 
 			<input type="text" size="30" name="nome"> 
