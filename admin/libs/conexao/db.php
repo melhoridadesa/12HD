@@ -20,9 +20,31 @@ function ConexaoBD($host, $user, $pass, $banco, $sql)
 	}
 	else{
 		$conexao = mysqli_connect($host, $user, $pass, $banco);
-		if (!$resultado = mysqli_query($conexao, $sql)) {
-			printf("<br>MYSQL Errormessage: %s\n", mysqli_error($conexao));
+
+		if (mysqli_connect_error()) {
+            die('Conexao Falhou (' . mysqli_connect_errno() . ') '
+                    . mysqli_connect_error());
+        }
+        else
+        {
+
+			if (mysqli_connect_errno()) {
+	    		printf("Conexao Falhou: %s\n", mysqli_connect_error());
+	    	exit();
+			}
+			else
+			{
+
+				if(!$conexao){
+					return false;
+				}
+				else{
+					if (!$resultado = mysqli_query($conexao, $sql)) {
+						printf("<br>MYSQL Errormessage: %s\n", mysqli_error($conexao));
+					}
+					return $resultado;
+				}
+			}
 		}
-		return $resultado;
 	}
 }
