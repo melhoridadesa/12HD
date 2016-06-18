@@ -2,9 +2,15 @@
 	$param = '';
 	if (isset($_GET['page']) && !empty($_GET['page']) && is_numeric($_GET['page']) && ($_GET['page']==3 || $_GET['page']==4)){
 		if ($_GET['page']==3)
-			require "/var/www/12HD/admin/libs/crud/cad_responsavel.php";
-		else
-			require "/var/www/12HD/admin/libs/crud/cad_responsavel.php";
+			$responsavel = "/var/www/12HD/admin/libs/crud/cad_responsavel.php";
+			if(isset(require $responsavel)){
+				require_once $responsavel;
+				echo "teste";
+			}
+
+			else{
+
+			}
 	}else{
 		if(isset($_GET['page']) && !empty($_GET['page']) && is_numeric($_GET['page']))
 			$param = 'and id='. $_GET['page'];
