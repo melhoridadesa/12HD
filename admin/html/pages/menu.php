@@ -4,7 +4,7 @@
 		header("Location:/12HD/admin/libs/login/login.html");
 		return;
 	}
-?>
+?> 
 
 <?php 
 $filename = $_SERVER["DOCUMENT_ROOT"] . "/12HD/admin/libs/crud/visMenu.php";
@@ -13,8 +13,8 @@ if (file_exists($filename)) {
 
 	require_once $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/crud/visMenu.php";
 
-	$row = VisualizaMenu();
-
+	$row = (!empty(VisualizaMenu())) ? VisualizaMenu() : [];
+	
 ?>
 
 
@@ -44,14 +44,17 @@ if (file_exists($filename)) {
 
 	<div class="list-menu">
 		<ul>
-			<?php foreach($row as $valor):?>
-				
-				<li>
-					<span><?php echo $valor['Link'] . ' - ' . $valor['Titulo'];?>
-					<a href="<?php echo 'layout.php?page=edit_menu&id='.$valor['Id']?>">editar</a>
-					<a href="<?php echo 'layout.php?page=delete_menu&id='.$valor['Id']?>">deletar</a>
-				</li>
-			<?php endforeach;?>
+			<?php if(!empty($row)):?>
+				<?php foreach($row as $valor):?>
+					<?php if(empty($valor)) continue;?>
+					<li>
+						<span><?php echo $valor['Link'] . ' - ' . $valor['Titulo'];?>
+						<a href="<?php echo 'layout.php?page=edit_menu&id='.$valor['Id']?>">editar</a>
+						<a href="<?php echo 'link?id='.$valor['Id']?>">deletar</a>
+					</li>
+				<?php endforeach;?>
+			<?php endif;?>
+		
 		<ul>
 	</div>
 	</div>
