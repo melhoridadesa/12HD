@@ -1,7 +1,16 @@
 
 <?php 
-	require_once $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/crud/visListaResp.php";
+
+	if(!isset($_SESSION['user'])){
+		header("Location:/12HD/admin/libs/login/login.html");
+		return;
+	}
 	
+	$path = $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/crud/visListaResp.php";
+	
+	if(file_exists($path)){
+		require_once $path;
+	}
   	$pagina=isset($_GET['pagina'])?$_GET['pagina']:false;
 	if (!$pagina) {
 		$pagAtual = "1";
