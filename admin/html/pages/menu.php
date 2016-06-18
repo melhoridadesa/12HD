@@ -1,15 +1,11 @@
 <?php 
-		$array = [
-			'lista' => [
-				'titulo' => 'teste1',
-				'id'	=> 1
-			],
-			'lista1' => [
-				'titulo' => 'teste2',
-				'id'	=> 2
-			]
-		];
+$filename = $_SERVER["DOCUMENT_ROOT"] . "/12HD/admin/libs/crud/visMenu.php";
 
+if (file_exists($filename)) {
+
+	require_once $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/crud/visMenu.php";
+
+	$row = VisualizaMenu();
 ?>
 
 <div class="content">
@@ -37,12 +33,12 @@
 
 	<div class="list-menu">
 		<ul>
-			<?php foreach($array as $key => $val):?>
+			<?php foreach($row as $valor):?>
 				
 				<li>
-					<span><?php echo $val['titulo'];?>
-					<a href="<?php echo 'http://localhost/12HD/admin/html/layout.php?page=edit_menu&id='.$val['id']?>">editar</a>
-					<a href="<?php echo 'link?id='.$val['id']?>">deletar</a>
+					<span><?php echo $valor['Link'] . ' - ' . $valor['Titulo'];?>
+					<a href="<?php echo 'layout.php?page=edit_menu&id='.$valor['Id']?>">editar</a>
+					<a href="<?php echo 'link?id='.$valor['Id']?>">deletar</a>
 				</li>
 			<?php endforeach;?>
 		<ul>
@@ -51,3 +47,11 @@
 
 </div>
 
+<?php
+
+}
+else{
+	echo "Arquivo visMenu.php nao existe";
+}
+
+?>

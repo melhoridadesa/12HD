@@ -7,7 +7,7 @@
 	
 	if(!empty($file)){
 		require_once $file;
-	}else {
+	}else { 
 		echo "arqvui nao existe";
 	}
 	
