@@ -1,7 +1,8 @@
 <?php 
-	session_start();
+	
 	if(!isset($_SESSION['user'])){
-		header("Location:/12HD/admin/html/layout.php?page=lista");
+		header("Location:/12HD/admin/libs/login/login.html");
+		return;
 	}
 	
 	
