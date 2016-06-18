@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once $_SERVER["DOCUMENT_ROOT"]."/admin/libs/conexao/db.php";
+require_once $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/conexao/db.php";
 
 if(isset($_SESSION["CpfResponsavel"])){
 	//echo $_SESSION["CpfResponsavel"];
@@ -57,7 +57,8 @@ if(isset($_SESSION["CpfResponsavel"])){
 
 	$CadResp = Cad_Idoso($nome,$cpf,$_SESSION["CpfResponsavel"]);
 	echo "<h5>$CadResp</h5>";
-	echo "<p><a href=\"../../../portal/index.php\">Voltar</a> ao inicio.</p>";
+	echo "<p><a href=\"header('Location:http://localhost/12HD/portal');
+\">Voltar</a> ao inicio.</p>";
 	}else{
 
 ?>	

@@ -23,6 +23,7 @@
 				<li><a href="layout.php?page=menu">cadastrar menu</a></li>
 				<li><a href="layout.php?page=lista">lista de responsaveis</a></li>
 				<li><a href="pages/pdf.php">Relatorio</a></li>
+				<li><a href="layout.php?page=contato">Lista de Contatos</a></li>
 			</ul>
 		</div>
 		<content>
