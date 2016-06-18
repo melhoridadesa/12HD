@@ -1,6 +1,7 @@
 <?php
 
-require_once $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/conexao/db.php";
+session_start();
+require_once $_SERVER["DOCUMENT_ROOT"]."/admin/libs/conexao/db.php";
 //echo($_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/conexao/db.php");
 
 $nome = NULL;
@@ -23,9 +24,11 @@ if(isset($_POST['BTCadastrarResp'])){
 
 	$CadResp = Cad_Responsavel($nome,$endereco,$cpf,$email,$telefone);
 	echo "<h5>$CadResp</h5>";
+	echo "<p> Clique em <a href=\"cad_idoso.php\">Continuar</a> para cadastrar o Idoso</p>";
+
 
 }else{
-	?>
+?>
 	<h1>Cadastro de Responsavel</h1>
 	<h5>Preencha os dados abaixo para cadastrar um responsavel por idosos</h5>
 	<form action="<?php $PHP_SELF; ?>" method="POST"> 
@@ -53,7 +56,7 @@ if(isset($_POST['BTCadastrarResp'])){
 			<input type="submit" name="BTCadastrarResp" value="Cadastrar">
 		</p>
 
-		<?php
+<?php
 	};
 
 	//Funcao cadastra responsavel
@@ -74,18 +77,22 @@ if(isset($_POST['BTCadastrarResp'])){
 		$query.= "(`Id`, `ResponsavelCPF`, `ResponsavelNome`, `ResponsavelEmail`, ";
 		$query.= "`ResponsavelTelefone`, `ResponsavelDDD`,`IdosoCPF`,`IdosoNome`) ";
 		$query.= "VALUES (NULL, '$cpf', '$nome', '$email', ";
-		$query.= "'$telefone', '11',$gambi1,$gambi2);";
+		$query.= "'$telefone', '11','$gambi1','$gambi2');";
 		//echo ($query);
 		$conexao = ConexaoBD("localhost","root","123456","MelhorIdadeSA",$query);
 
+		$_SESSION["CpfResponsavel"]="$cpf";
 		echo "<h1>Dados enviados</h1>";
 		return $Cadastro_Status_Ok;
-
+		
 		}else{
 
 		echo "<h1>Favor validar as informacoes abaixo:</h1>";
 		printf(implode(" <br>",$ValidaForm));
+		echo "<p> <a href=\"cad_responsavel.php\">Voltar</a> </p>";
 		die();
+		
+		//die();
 		
 		};
 };
