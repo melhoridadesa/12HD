@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<header>
-			<?php 	require_once "header.php"; ?>
+			<?php if(file_exists("header.php")){require_once "header.php";}else{ echo "arquivo header.php nao existe"; }?>
 		</header>
 		<div id="menu">
 			<ul class="menu lista">
@@ -18,11 +18,11 @@
 			</ul>
 		</div>
 		<content>
-			<?php 	require_once "content.php"; ?>
+			<?php 	if(file_exists("content.php")){require_once "content.php";}else{ echo "arquivo content.php nao existe"; } ?>
 		</content>
 
 		<footer>
-			<?php 	require_once "footer.php"; ?>
+			<?php if(file_exists("footer.php")){require_once "footer.php";}else{ echo "arquivo footer.php nao existe"; }?>
 		</footer>
 		
 	</body>
