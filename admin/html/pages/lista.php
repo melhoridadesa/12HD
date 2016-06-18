@@ -9,6 +9,8 @@
 		$pagAtual = $pagina;
 	}
 
+	if(empty(VisualizaResponsaveis()))return;
+	
 	$inicio = $pagAtual - 1;
 	$inicio = $inicio * 10;
 	
