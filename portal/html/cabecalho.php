@@ -12,7 +12,7 @@
 		<ul>
 			<?php
 
-			if(!$resultado){
+			if(mysqli_num_rows($resultado) < 1){
 					echo "nenhum dado encontrado";
 			}else{
 				while($linha = mysqli_fetch_array($resultado,MYSQLI_ASSOC)){ ?>
