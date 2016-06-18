@@ -1,3 +1,11 @@
+<?php 
+	session_start();
+	if(!isset($_SESSION['user'])){
+		header("Location:/12HD/admin/libs/login/login.html");
+		return;
+	}
+?>
+
 
 <html>
 	<head>	
