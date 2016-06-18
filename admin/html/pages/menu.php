@@ -6,6 +6,7 @@ if (file_exists($filename)) {
 	require_once $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/crud/visMenu.php";
 
 	$row = VisualizaMenu();
+
 ?>
 
 <div class="content">
