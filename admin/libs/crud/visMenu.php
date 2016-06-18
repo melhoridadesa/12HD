@@ -3,7 +3,7 @@ require_once('/var/www/12HD/admin/libs/conexao/db.php');
 
 function VisualizaMenu()
 {
-	$sql = "SELECT * FROM Pagina where id not in(3,4)";
+	$sql = "SELECT * FROM Pagina";
 
 	$funcao = ConexaoBD("localhost", "root", "123456", "MelhorIdadeSA", $sql);
 
