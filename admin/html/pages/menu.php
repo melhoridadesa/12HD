@@ -4,7 +4,7 @@
 		header("Location:/12HD/admin/libs/login/login.html");
 		return;
 	}
-?>
+?> 
 
 <?php 
 $filename = $_SERVER["DOCUMENT_ROOT"] . "/12HD/admin/libs/crud/visMenu.php";
@@ -53,8 +53,8 @@ if (file_exists($filename)) {
 						<a href="<?php echo 'link?id='.$valor['Id']?>">deletar</a>
 					</li>
 				<?php endforeach;?>
-				
 			<?php endif;?>
+		
 		<ul>
 	</div>
 	</div>

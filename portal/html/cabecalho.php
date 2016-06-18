@@ -1,7 +1,9 @@
 
 <?php
+
 	require_once '/var/www/12HD/admin/libs/conexao/db.php';
 	$resultado = ConexaoBD('localhost', 'root', '123456', 'MelhorIdadeSA', 'select id, link from Pagina where ativo=1 order by posicao asc, datahoraupdate desc');
+
 ?>
 
 <tr>
@@ -10,7 +12,7 @@
 		<ul>
 			<?php
 
-			if(!$resultado){
+			if(mysqli_num_rows($resultado) < 1){
 					echo "nenhum dado encontrado";
 			}else{
 				while($linha = mysqli_fetch_array($resultado,MYSQLI_ASSOC)){ ?>
