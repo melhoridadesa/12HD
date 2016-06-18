@@ -6,4 +6,6 @@
 	if($file_connect && $file_login){
 		require_once $file_connect;
 	 	require_once $file_login;
+	}else{
+		echo "arquivos nao encontrados";
 	}
