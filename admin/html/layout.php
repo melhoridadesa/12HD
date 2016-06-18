@@ -1,3 +1,11 @@
+<?php 
+	session_start();
+	if(!isset($_SESSION['user'])){
+		header("Location:/12HD/admin/libs/login/login.html");
+		return;
+	}
+?>
+
 
 <html>
 	<head>	
@@ -8,21 +16,21 @@
 	</head>
 	<body>
 		<header>
-			<?php 	require_once "header.php"; ?>
+			<?php if(file_exists("header.php")){require_once "header.php";}else{ echo "arquivo header.php nao existe"; }?>
 		</header>
 		<div id="menu">
 			<ul class="menu lista">
-				<li><a href="http://localhost/12HD/admin/html/layout.php?page=menu">cadastrar menu</a></li>
-				<li><a href="http://localhost/12HD/admin/html/layout.php?page=lista">lista de responsaveis</a></li>
-				<li><a href="http://localhost/12HD/admin/html/layout.php?page=relatorio">Relatorio</a></li>
+				<li><a href="layout.php?page=menu">cadastrar menu</a></li>
+				<li><a href="layout.php?page=lista">lista de responsaveis</a></li>
+				<li><a href="pages/pdf.php">Relatorio</a></li>
 			</ul>
 		</div>
 		<content>
-			<?php 	require_once "content.php"; ?>
+			<?php 	if(file_exists("content.php")){require_once "content.php";}else{ echo "arquivo content.php nao existe"; } ?>
 		</content>
 
 		<footer>
-			<?php 	require_once "footer.php"; ?>
+			<?php if(file_exists("footer.php")){require_once "footer.php";}else{ echo "arquivo footer.php nao existe"; }?>
 		</footer>
 		
 	</body>

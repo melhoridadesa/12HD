@@ -1,12 +1,13 @@
 <?php
 
-require('../crud/cadMenu.php');
+require('../crud/editMenu.php');
 
+$id = $_GET['id'];
 $link = $_POST['link'];
 $titulo = $_POST['titulo'];
 $posicao = $_POST['posicao'];
+$ativo = $_POST['ativo'];
 $corpo = $_POST['corpo'];
-$ativo = 1;
 $data = date("Y-m-d H:i:s");
 
-CadastraMenu($link, $titulo, $corpo, $ativo, $data, $posicao);
+UpdateMenu($link, $titulo, $posicao, $ativo, $corpo, $data, $id);
