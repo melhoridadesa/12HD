@@ -1,4 +1,12 @@
 <?php 
+	
+	if(!isset($_SESSION['user'])){
+		header("Location:/12HD/admin/libs/login/login.html");
+		return;
+	}
+?>
+
+<?php 
 $filename = $_SERVER["DOCUMENT_ROOT"] . "/12HD/admin/libs/crud/visMenu.php";
 
 if (file_exists($filename)) {
@@ -6,7 +14,10 @@ if (file_exists($filename)) {
 	require_once $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/crud/visMenu.php";
 
 	$row = VisualizaMenu();
+
 ?>
+
+
 
 <div class="content">
 	<div class="new">

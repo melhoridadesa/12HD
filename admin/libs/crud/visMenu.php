@@ -7,11 +7,17 @@ function VisualizaMenu()
 
 	$funcao = ConexaoBD("localhost", "root", "123456", "MelhorIdadeSA", $sql);
 
-	if (mysqli_num_rows($funcao) > 0) {
+	if ($funcao == true) {
+		
+		if (mysqli_num_rows($funcao) > 0){
 
-		return $funcao;
-	    
-	} else {
-	    echo "0 Resultado";
+			return $funcao;
+		    
+		} else {
+		    echo "0 Resultado";
+		}
+	}
+	else{
+		echo "Erro ao conectar com o banco de dados";
 	}
 }

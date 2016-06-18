@@ -8,9 +8,17 @@
 	<td>LOGO</td>
 	<td>
 		<ul>
-			<?php while($linha = mysqli_fetch_array($resultado,MYSQLI_ASSOC)){ ?>
+			<?php
+
+			if(!$resultado){
+					echo "nenhum dado encontrado";
+			}else{
+				while($linha = mysqli_fetch_array($resultado,MYSQLI_ASSOC)){ ?>
 				<li><a href="?page=<?php  echo $linha['id'] ?>"> <?php  echo $linha['link'] ?> </a></li>
-			<?php }?>
+			<?php
+				}
+			}
+			?>
 		</ul>
 	</td>
 </tr>
