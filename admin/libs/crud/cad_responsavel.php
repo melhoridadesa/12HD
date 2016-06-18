@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once $_SERVER["DOCUMENT_ROOT"]."/admin/libs/conexao/db.php";
+require_once $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/conexao/db.php";
 //echo($_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/conexao/db.php");
 
 $nome = NULL;
@@ -24,7 +24,7 @@ if(isset($_POST['BTCadastrarResp'])){
 
 	$CadResp = Cad_Responsavel($nome,$endereco,$cpf,$email,$telefone);
 	echo "<h5>$CadResp</h5>";
-	echo "<p> Clique em <a href=\"cad_idoso.php\">Continuar</a> para cadastrar o Idoso</p>";
+	echo "<p> Clique em <a href=\"../admin/libs/crud/cad_idoso.php\">Continuar</a> para cadastrar o Idoso</p>";
 
 
 }else{
