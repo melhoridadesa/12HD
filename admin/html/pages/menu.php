@@ -2,14 +2,10 @@
 $filename = $_SERVER["DOCUMENT_ROOT"] . "/12HD/admin/libs/crud/visMenu.php";
 
 if (file_exists($filename)) {
+
 	require_once $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/crud/visMenu.php";
-}
-else{
-	echo "Arquivo visMenu.php nao existe";
-}
 
-$row = VisualizaMenu();
-
+	$row = VisualizaMenu();
 ?>
 
 <div class="content">
@@ -51,3 +47,11 @@ $row = VisualizaMenu();
 
 </div>
 
+<?php
+
+}
+else{
+	echo "Arquivo visMenu.php nao existe";
+}
+
+?>

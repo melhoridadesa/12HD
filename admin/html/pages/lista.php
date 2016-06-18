@@ -2,7 +2,7 @@
 <?php 
 	require_once $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/crud/visListaResp.php";
 	
-  	$pagina=$_GET['pagina'];
+  	$pagina=isset($_GET['pagina'])?$_GET['pagina']:false;
 	if (!$pagina) {
 		$pagAtual = "1";
 	} else {
