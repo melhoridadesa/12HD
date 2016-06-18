@@ -15,5 +15,6 @@
 		require_once $file;
 	}else { 
 		echo "arqvui nao existe";
+		return ;
 	}
 	

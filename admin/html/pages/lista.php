@@ -10,7 +10,11 @@
 	
 	if(file_exists($path)){
 		require_once $path;
-	}
+	}else{
+		echo 'arquivo nao encontrado';
+		return;
+	} 
+	
   	$pagina=isset($_GET['pagina'])?$_GET['pagina']:false;
 	if (!$pagina) {
 		$pagAtual = "1";

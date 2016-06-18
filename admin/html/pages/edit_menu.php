@@ -1,5 +1,19 @@
 <?php
-require $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/crud/editMenu.php";
+
+
+if(!isset($_SESSION['user'])){
+	header("Location:/12HD/admin/libs/login/login.html");
+	return;
+}
+
+$path = $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/crud/editMenu.php";
+
+if(file_exists($path)){
+	require_once $path;
+}else{
+	echo 'arquivo nao encontrado';
+	return;
+} 
 
 $id = $_GET['id'];
 
