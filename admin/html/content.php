@@ -8,5 +8,5 @@
 	if(!empty($file)){
 		require_once $file;
 	}else {
-		echo "arqvui nao existe";
+		echo "arquivo nao existe";
 	}
