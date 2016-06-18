@@ -1,4 +1,5 @@
 <?php 
+
 	$path = "/var/www/12HD/admin/libs/conexao/db.php";
 	if(file_exists($path)){
 		require_once $path;
@@ -22,9 +23,11 @@
             
             if (mysqli_num_rows($verifica)<=0){
             echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='/12HD/admin/libs/login/login.html';</script>";
-                    die();
+                    return;
             }else{
+
             		session_start();
+            		
             		while( $data = mysqli_fetch_assoc($verifica)){
             			unset($data['Senha']);
             			$_SESSION['user'] = $data;
