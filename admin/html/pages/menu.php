@@ -39,7 +39,7 @@ if (file_exists($filename)) {
 				<li>
 					<span><?php echo $valor['Link'] . ' - ' . $valor['Titulo'];?>
 					<a href="<?php echo 'layout.php?page=edit_menu&id='.$valor['Id']?>">editar</a>
-					<a href="<?php echo 'link?id='.$valor['Id']?>">deletar</a>
+					<a href="<?php echo 'layout.php?page=delete_menu&id='.$valor['Id']?>">deletar</a>
 				</li>
 			<?php endforeach;?>
 		<ul>
