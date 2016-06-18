@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/conexao/db.php";
+require_once $_SERVER["DOCUMENT_ROOT"]."/admin/libs/conexao/db.php";
 //echo($_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/conexao/db.php");
 
 $nome = NULL;
@@ -24,8 +24,9 @@ if(isset($_POST['BTCadastrarResp'])){
 
 	$CadResp = Cad_Responsavel($nome,$endereco,$cpf,$email,$telefone);
 	echo "<h5>$CadResp</h5>";
-	echo "<p> Clique em <a href=\"../admin/libs/crud/cad_idoso.php\">Continuar</a> para cadastrar o Idoso</p>";
-
+	//echo "<p> Clique em <a href=\"../admin/libs/crud/cad_idoso.php\">Continuar</a> para cadastrar o Idoso</p>";
+	echo "----------------------------------------------";
+	echo "<br><iframe src=\"cad_idoso.php\" name=\"tv\" margin=\"0\"width=\"468\" height=\"350\" scrolling=\"no\" frameborder=\"0\" style=\"border:0px\"></iframe>";
 
 }else{
 ?>
@@ -65,7 +66,7 @@ if(isset($_POST['BTCadastrarResp'])){
 		//echo($nome."_".$endereco."_".$cpf."_".$email."_".$telefone);
 
 		$Cadastro_Status_Erro = "Ouve um erro ao inserir os dados no sistema, por favor contate o administrador.";
-		$Cadastro_Status_Ok = "Seus dados foram cadastrados com sucesso...";
+		$Cadastro_Status_Ok = "Responsavel foi cadastrado com sucesso...";
 
 		//Valida se os  dados vindos no formulario
 		$ValidaForm = Valida_Cad_Resposavel($nome,$endereco,$cpf,$email,$telefone);

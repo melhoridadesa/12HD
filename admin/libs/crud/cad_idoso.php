@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once $_SERVER["DOCUMENT_ROOT"]."/12HD/admin/libs/conexao/db.php";
+require_once $_SERVER["DOCUMENT_ROOT"]."/admin/libs/conexao/db.php";
 
 if(isset($_SESSION["CpfResponsavel"])){
 	//echo $_SESSION["CpfResponsavel"];
@@ -10,7 +10,7 @@ if(isset($_SESSION["CpfResponsavel"])){
 
 		//echo($nome."_".$endereco."_".$cpf."_".$email."_".$telefone);
 		$Cadastro_Status_Erro = "Ouve um erro ao inserir os dados no sistema, por favor contate o administrador.";
-		$Cadastro_Status_Ok = "Seus dados foram cadastrados com sucesso...";
+		$Cadastro_Status_Ok = "Idoso cadastrado com sucesso...";
 
 		//Valida se os  dados vindos no formulario
 		$ValidaForm = Valida_Cad_Idoso($nome,$cpf);
