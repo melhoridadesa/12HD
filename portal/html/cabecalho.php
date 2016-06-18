@@ -1,7 +1,7 @@
 
 <?php
-	require_once "..\admin\libs\conexao\db.php";
-	$resultado = ConexaoBD('localhost', 'root', '123456', 'MelhorIdadeSA', 'select id, link from pagina where ativo=1 order by posicao asc, datahoraupdate desc');
+	// require_once "..\admin\libs\conexao\db.php";
+	//$resultado = ConexaoBD('localhost', 'root', '123456', 'MelhorIdadeSA', 'select id, link from pagina where ativo=1 order by posicao asc, datahoraupdate desc');
 ?>
 
 <tr>
