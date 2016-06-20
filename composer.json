@@ -1,14 +1,1 @@
-{
-    "name": "Teste mPDF",
-    "description": "Gerar relatorio pdf",
-    "authors": [
-        {
-            "name": "Anderson",
-            "email": "teste@teste.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.2.8",
-	"mpdf/mpdf" : "6.*"
-    }
-}
+{ "name": "Nome do projeto", "description": "Breve descrição do que a aplicação se propoe a fazer", "authors": [ { "name": "Seu nome", "email": "seu-email@seu-dominio.com" } ], "require": { "php": ">=5.2.8", "mpdf/mpdf" : "6.*" } }
