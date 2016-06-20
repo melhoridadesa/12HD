@@ -1,7 +1,7 @@
 
 <?php
 
-	$resultado = ConexaoBD('localhost', 'root', '123456', 'MelhorIdadeSA1', 'select id, link from Pagina where ativo=1 order by posicao asc, datahoraupdate desc');
+	$resultado = ConexaoBD('localhost', 'root', '123456', 'MelhorIdadeSA', 'select id, link from Pagina where ativo=1 order by posicao asc, datahoraupdate desc');
 
 ?>
 
